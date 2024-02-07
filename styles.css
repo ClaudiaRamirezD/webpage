@@ -1,0 +1,293 @@
+/* Reset and general styles */
+:root {
+    --primary-color: #07475A;
+    --secondary-color: #0D6A87;
+    --background-color: #0b132b;
+    --text-color: white;
+    --accent-color: #8EC7D2;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Navbar styles */
+.navbar-toggler {
+    color: rgba(142, 199, 210, 0.55);
+}
+
+/* Heading styles */
+h1, #about h2, h4 {
+    color: var(--primary-color);
+}
+
+/* Section styles */
+#about p,
+#skills p {
+    color: var(--secondary-color);
+}
+
+.section {
+    padding-top: 4rem;
+}
+
+.section:last-of-type {
+    padding-bottom: 4rem;
+}
+
+/* Hero section styles */
+.bgimage {
+    height: 100vh;
+    background: url('images/bk-yellow.jpg');
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.hero_title {
+    font-size: 4.5rem;
+}
+
+.hero_desc {
+    font-size: 2rem;
+}
+
+.hero_text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+}
+
+/* About section styles */
+.image_about {
+    height: 500px;
+    width: auto;
+}
+
+/* Dark Navbar styles */
+.navbarDark {
+    background: var(--background-color);
+}
+
+/* Social icons styles */
+.fab {
+    text-align: center;
+    padding: 0.4em;
+    transition: padding-left 0.3s ease;
+}
+
+.social {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.social li {
+    width: 30px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social a:hover .fab {
+    padding-left: 2em;
+}
+
+.fa-facebook {
+    background: #3b5998;
+}
+
+.fa-facebook-messenger {
+    background: #0084ff;
+}
+
+.fa-whatsapp {
+    background: #25d366;
+}
+
+.fa-instagram {
+    background: #F32357;
+}
+
+.fa-github {
+    background: black;
+}
+
+/* Skills section styles */
+.skillsText.card {
+    height: 280px;
+    cursor: pointer;
+}
+
+.skillsIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card:hover .skillsIcon {
+    color: var(--secondary-color);
+}
+
+.skillsText:hover {
+    border: 1px solid var(--secondary-color);
+}
+
+/* Footer styles */
+#footer {
+    background: var(--background-color);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-icons {
+    color: rgb(142, 199, 210);
+    background: var(--background-color);
+}
+
+
+.social-icon,
+.menu,
+.p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.footer-icons:hover {
+    color: var(--secondary-color);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: rgb(142, 199, 210);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+footer p {
+    color: rgb(142, 199, 210);
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Map container styles */
+.map-container {
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    color: red;
+    width: 100%;
+}
+
+#embedmap-canvas {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+#embedmap-canvas iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Button styles */
+.btn {
+    background: var(--background-color);
+    color: var(--accent-color);
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Navigation link styles */
+.nav-link {
+    color: azure;
+}
+
+.nav-link:hover {
+    color: rgb(142, 199, 210);
+}
+
+/* Media query for small devices */
+@media (max-width: 767px) {
+    .map-container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    .hero_title {
+        padding-top: 10rem;
+    }
+}
